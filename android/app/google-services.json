@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "879749253377",
+    "project_id": "moraeng-a2ade",
+    "storage_bucket": "moraeng-a2ade.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879749253377:android:343580ee9491eef272b300",
+        "android_client_info": {
+          "package_name": "com.studysaran.moraeng"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879749253377-mbf66604061m4a70ge9u6so1i1j5c11e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC56pH6Bem6i7l480soyzt3arYIrId31g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879749253377-mbf66604061m4a70ge9u6so1i1j5c11e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "879749253377-km41ojiodssj7dah8u6mtrobn0lq6086.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.studysaran.moraeng"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
