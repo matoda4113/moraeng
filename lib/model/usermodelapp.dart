@@ -15,6 +15,9 @@ class UserModelApp{
   int userCode; //0-9 관리자, 10-99 관계자, 100~ 유저
   int cash;
 
+  //선호내역
+  List keyWord;
+
 
   String reference1;
   String reference2;
@@ -33,6 +36,7 @@ class UserModelApp{
       this.targetLanguage,
       this.userCode,
       this.cash,
+        this.keyWord,
       this.reference1,
       this.reference2,
       this.reference3,
@@ -49,9 +53,10 @@ class UserModelApp{
     thumbnail:doc['thumbnail']??"",
         createAt:doc['createAt']??Timestamp(0,0),
     point:doc['point']??0,
-    targetLanguage:doc['targetLanguage']??"japan",
+    targetLanguage:doc['targetLanguage']??"en",
    userCode:doc['userCode']??100,
    cash:doc['cash']??0,
+    keyWord: ['keyWord']??[],
     reference1:doc['reference1']??"",
     reference2:doc['reference2']??"",
     reference3:doc['reference3']??"",
@@ -71,6 +76,7 @@ class UserModelApp{
       'targetLanguage':data.targetLanguage??"en",
       'userCode':data.userCode??100,
       'cash':data.cash??0,
+      'keyword':data.keyWord??[],
       'reference1':data.reference1??"",
       'reference2':data.reference2??"",
       'reference3':data.reference3??"",
@@ -90,6 +96,7 @@ class UserModelApp{
       'targetLanguage':'en',
       'userCode':100,
       'cash':0,
+      'keyword':[],
       'reference1':'',
       'reference2':'',
       'reference3':'',

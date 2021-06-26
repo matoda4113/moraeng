@@ -44,7 +44,7 @@ class _MoraengVocaCardState extends State<MoraengVocaCard> {
         children: [
           Row(
             children: [
-              Text(widget.oneVoca.korean,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+              Text(widget.oneVoca.other,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
               Spacer(),
               GestureDetector(
                   onTap: ()async{
@@ -52,11 +52,11 @@ class _MoraengVocaCardState extends State<MoraengVocaCard> {
                       speaking=true;
                     });
 
-                    tts.setLanguage('ko');
+                    tts.setLanguage(widget.oneVoca.language);
                     tts.setSpeechRate(0.4);
 
-                    tts.speak(widget.oneVoca.korean);
-                    Timer(Duration(milliseconds: widget.oneVoca.korean.length*400), (){
+                    tts.speak(widget.oneVoca.other);
+                    Timer(Duration(milliseconds: widget.oneVoca.other.length*100), (){
                       setState(() {
                         speaking=false;
                       });
@@ -68,7 +68,7 @@ class _MoraengVocaCardState extends State<MoraengVocaCard> {
             ],
           ),
           SizedBox(height: 5,),
-          Text(widget.oneVoca.other,style: TextStyle(fontWeight: FontWeight.bold),),
+          Text(widget.oneVoca.korean,style: TextStyle(fontWeight: FontWeight.bold),),
           // Text(widget.oneVoca.country),
           Text(widget.oneVoca.day.toString())
 

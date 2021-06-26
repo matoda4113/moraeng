@@ -4,10 +4,8 @@ import 'package:get/get.dart';
 import 'package:moraeng/card/moraengpostcard.dart';
 import 'package:moraeng/model/postmodelapp.dart';
 import 'package:moraeng/provider/postprovider.dart';
-import 'package:moraeng/provider/userprovider.dart';
 
-class TopContents extends StatelessWidget {
-
+class SongContents extends StatelessWidget {
   PostProvider postProvider = Get.find();
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,7 @@ class TopContents extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              '인기 컨텐츠',
+                              '노래로 배우기',
                               style: TextStyle(fontSize: 20),
                             ),
                           ],
@@ -37,7 +35,7 @@ class TopContents extends StatelessWidget {
                     ),
                   ),
                   AspectRatio(
-                    aspectRatio: 3/1,
+                    aspectRatio: 2/1,
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -48,7 +46,8 @@ class TopContents extends StatelessWidget {
                                 return Row(
                                   children: [
                                     MoraengPostCard(
-
+                                      ratio: 1,
+                                      isCircle: true,
                                       thisPost: PostModelApp.fromFireStore(
                                           doc),
                                     ),
@@ -73,3 +72,5 @@ class TopContents extends StatelessWidget {
     });
   }
 }
+
+

@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:moraeng/page/landingpage.dart';
 import 'package:moraeng/mainpage.dart';
 import 'package:moraeng/page/signinpage.dart';
+import 'package:moraeng/provider/appinfo.dart';
 import 'package:moraeng/provider/postprovider.dart';
 import 'package:moraeng/provider/userprovider.dart';
 import 'package:moraeng/provider/vocaprovider.dart';
@@ -39,6 +40,7 @@ class _StartPageState extends State<StartPage> {
   UserProvider userProvider= Get.put(UserProvider());
   PostProvider postProvider= Get.put(PostProvider());
   VocaProvider vocaProvider= Get.put(VocaProvider());
+  AppInfoProvider appInfoProvider= Get.put(AppInfoProvider());
   // @override
   // void initState() {
   //   if(userProvider.firebaseAuth.currentUser!=null){

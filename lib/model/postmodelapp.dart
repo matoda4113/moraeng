@@ -7,6 +7,8 @@ class PostModelApp{
   String id;
   String title;
   String thumbnail;
+  String language;
+  List keyword;
   int typeCode; //0=동화 1=노래
   String videoUrl; //영상주소
 
@@ -20,6 +22,8 @@ class PostModelApp{
     this.id,
     this.title,
     this.thumbnail,
+    this.language,
+    this.keyword,
     this.typeCode,
     this.videoUrl,
 
@@ -33,7 +37,10 @@ class PostModelApp{
       id: doc['id']??"",
       title: doc['title']??"",
       thumbnail: doc['thumbnail']??"",
+      language: doc['language']??"",
+      keyword: doc['keyword']??[],
       typeCode: doc['typeCode']??1000,
+      videoUrl: doc['videoUrl']??"",
 
 
       totalView: doc['totalView']??0,

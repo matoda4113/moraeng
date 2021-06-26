@@ -4,6 +4,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moraeng/mainpage.dart';
+import 'package:moraeng/provider/appinfo.dart';
 import 'package:moraeng/provider/postprovider.dart';
 import 'package:moraeng/provider/userprovider.dart';
 import 'package:moraeng/provider/vocaprovider.dart';
@@ -23,8 +24,13 @@ class _LandingPageState extends State<LandingPage> {
     PostProvider postProvider= Get.find();
     VocaProvider vocaProvider= Get.find();
     UserProvider userProvider= Get.find();
+    AppInfoProvider appInfoProvider= Get.find();
+
+
     await postProvider.getRecommendedPost();
     await userProvider.getUserDataFromFireStore();
+
+    await appInfoProvider.getOpenContentsInfo(userProvider.userFS.targetLanguage);
     await vocaProvider.getVocaList(userProvider.userFS.targetLanguage);
 
 

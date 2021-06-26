@@ -11,20 +11,7 @@ class UserProvider extends GetxController {
   FirebaseAuth firebaseAuth = FirebaseAuth.instance; // Firebase 인증 플러그인의 인스턴스
 
   UserModelApp userFS; // Firestore 사용자 데이터
-
-
   bool userLoading=false;
-
-  int testInt=1;
-
-  void plusInt(){
-    testInt++;
-    update();
-  }
-
-
-
-
 
 
   // 이메일/비밀번호로 Firebase에 회원가입
@@ -75,8 +62,6 @@ class UserProvider extends GetxController {
       return false;
     }
   }
-
-
 
 
   // 이메일/비밀번호로 Firebase에 로그인

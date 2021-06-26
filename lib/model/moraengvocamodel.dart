@@ -3,34 +3,34 @@ import 'package:flutter/material.dart';
 
 class MoraengVocaModel{
 
-  String country;
+  String language;
   String korean;
   String other;
   String url;
   int day;
 
 
-  MoraengVocaModel({this.country, this.korean, this.other, this.url,this.day});
+  MoraengVocaModel({this.language, this.korean, this.other, this.url,this.day});
 
 
 }
 
 class MoraengVocaModelJson{
 
-  String country;
+  String language;
   List korean;
   List other;
   List url;
   List day;
 
 
-  MoraengVocaModelJson({this.country, this.korean, this.other, this.url,this.day});
+  MoraengVocaModelJson({this.language, this.korean, this.other, this.url,this.day});
 
   factory MoraengVocaModelJson.fromJson(Map<String, dynamic> json) {
     return MoraengVocaModelJson(
         korean: json['korean']??[],
         other: json['other']??[],
-        country: json['country']??[],
+        language: json['language']??"",
         url: json['url']??[],
         day: json['day']??"");
   }
